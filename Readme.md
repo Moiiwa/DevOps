@@ -4,7 +4,7 @@ Completely done by Mikhail Gudkov
 This is a simple flask application that returns html with Moscow time which is being updated each second.  
 You can see example below.
 ![alt text](app_python/static/example.jpg)  
-Also you can check the full version of the site by the next [link]:http://moi-wa.com
+Also you can check the full version of the site by the next [link](http://moi-wa.com)
 
 **Installation**  
 * **Docker**  
