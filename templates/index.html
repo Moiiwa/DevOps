@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Html Generated</title>
+    <meta name="description" content="Figma htmlGenerator">
+    <meta name="author" content="htmlGenerator">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+
+</head>
+
+<style>
+    .5
+    _5 {
+        overflow: hidden;
+    }
+
+    .e5_5 {
+        width: 2230px;
+        height: 1280px;
+        position: absolute;
+    }
+
+    .e1_2 {
+        background-color: rgba(68.00000354647636, 62.05000162124634, 62.05000162124634, 1);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    .e1_3 {
+        background-color: rgba(127.64167159795761, 144.49999898672104, 131.35050058364868, 1);
+        width: 887px;
+        height: 125px;
+        position: absolute;
+        left: 517px;
+        top: 406px;
+    }
+
+    .e1_7 {
+        background-color: rgba(196.00000351667404, 196.00000351667404, 196.00000351667404, 1);
+        width: 757px;
+        height: 101px;
+        position: absolute;
+        left: 582px;
+        top: 241px;
+    }
+
+    .e1_6 {
+        color: rgba(0, 0, 0, 1);
+        width: 1614px;
+        height: 488px;
+        position: absolute;
+        left: 616px;
+        top: 241px;
+        font-family: Montserrat;
+        text-align: left;
+        font-size: 64px;
+        letter-spacing: 0;
+    }
+
+    .Timestamp {
+        background-color: rgba(127.64167159795761, 144.49999898672104, 131.35050058364868, 1);
+        color: rgba(0, 0, 0, 1);
+        font-family: Montserrat;
+        font-size: 64px;
+        margin-left: 35%;
+        margin-bottom: 50%;
+        height: 150px;
+        width: 200px;
+    }
+
+</style>
+
+<body >
+<script src="moment.js"></script>
+<script>
+
+    var dt = setInterval(displayTime, 1000);
+
+
+    function displayTime() {
+        var dt = new Date().toLocaleTimeString("rus", {timeZone: "Europe/Moscow"})
+
+        document.getElementById("datetime").innerHTML = dt;
+    }
+</script>
+<div class=e5_5>
+    <div class="e1_2"></div>
+    <div class="e1_3">
+        <p><span id="datetime" class="Timestamp"></span></p>
+    </div>
+    <div class="e1_7"></div>
+    <span class="e1_6">Current time (UTC+3)</span></div>
+</body>
+</html>
