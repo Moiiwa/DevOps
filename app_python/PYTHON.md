@@ -1,7 +1,7 @@
 **Best practices used in project**  
-* **Flask**  
-To develop an app I decided to use flask, since it is the easiest web-framework for python
-which doesn't need you to put a lot of effort in order to run single-page app.  
+* **Django**  
+To develop an app I decided to use Django, since it is not that difficult framework with support of ORM, templates and so on.
+Also it is pretty easy to configure.
 * **Figma** 
 1) *Figma itself*  
 In order to develop design for a webpage I decided to use Figma, since it has a lot of
