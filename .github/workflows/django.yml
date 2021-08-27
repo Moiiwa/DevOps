@@ -34,4 +34,3 @@ jobs:
       run: |
         cd app_python
         sudo docker build -t workflow_tag .
-        sudo docker run -p 8000:8000 workflow_tag 
