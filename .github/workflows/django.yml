@@ -11,7 +11,7 @@ jobs:
 
     runs-on: ubuntu-18.04
     strategy:
-      max-parallel: 1
+      max-parallel: 4
       matrix:
         python-version: [3.7]
 
@@ -53,9 +53,10 @@ jobs:
         sudo docker build -t moiwa/workflow_tag .
 
   test:
+    needs: build
     runs-on: ubuntu-18.04
     strategy:
-      max-parallel: 1
+      max-parallel: 4
       matrix:
         python-version: [3.7]
 
@@ -67,10 +68,10 @@ jobs:
 
 
   deploy:
-
+    needs: test
     runs-on: ubuntu-18.04
     strategy:
-      max-parallel: 1
+      max-parallel: 4
       matrix:
         python-version: [3.7]
 
