@@ -55,7 +55,7 @@ jobs:
   test:
     runs-on: ubuntu-18.04
     strategy:
-      max-parallel: 4
+      max-parallel: 1
       matrix:
         python-version: [3.7]
 
@@ -70,7 +70,7 @@ jobs:
 
     runs-on: ubuntu-18.04
     strategy:
-      max-parallel: 4
+      max-parallel: 1
       matrix:
         python-version: [3.7]
 
