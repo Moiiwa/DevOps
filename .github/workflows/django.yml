@@ -51,6 +51,12 @@ jobs:
       run: |
         cd app_python
         sudo docker build -t moiwa/workflow_tag .
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v2
+      with:
+        name: build_output
+        path: output
+        retention-days: 1
 
   test:
     needs: build
@@ -61,6 +67,10 @@ jobs:
         python-version: [3.7]
 
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build_output
     - name: Run Tests
       run: |
         cd app_python
