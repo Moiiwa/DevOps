@@ -117,6 +117,14 @@ jobs:
         python-version: [3.7]
 
     steps:
+      - name: Docker Layer Caching
+        uses: satackey/action-docker-layer-caching@v0.0.11
+      - uses: satackey/action-docker-layer-caching@v0.0.11
+        continue-on-error: true
+      - name: Build Image
+        run: |
+            cd app_python
+            sudo docker build -t moiwa/workflow_tag .
       - name: Deploy Image
         run: |
           sudo docker push moiwa/workflow_tag
