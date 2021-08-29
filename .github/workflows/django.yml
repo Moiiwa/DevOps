@@ -61,5 +61,5 @@ jobs:
   deploy:
     steps:
     - name: Deploy Image
-    run: |
+      run: |
         sudo docker push moiwa/workflow_tag
