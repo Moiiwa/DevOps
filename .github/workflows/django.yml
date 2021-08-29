@@ -67,10 +67,10 @@ jobs:
         python-version: [3.7]
 
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: build_output
+    - name: Download artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: build_output
     - name: Run Tests
       run: |
         cd app_python
