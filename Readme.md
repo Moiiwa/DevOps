@@ -1,4 +1,4 @@
-
+![workflow status](https://github.com/Moiiwa/Devops/actions/workflows/django.yml/badge.svg)
   <h3 align="center">**Moscow time displayer**</h3>
 
 <!-- TABLE OF CONTENTS -->
