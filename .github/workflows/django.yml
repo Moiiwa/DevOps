@@ -23,8 +23,11 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Cache directory   
       uses: actions/cache@v2.1.6
+      env:
+          cache-name: cache-directory
       with:
         path: .
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}        
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
