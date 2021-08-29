@@ -12,7 +12,7 @@ In order to speed up pipeline I decided to use the next Github Actions library
 https://github.com/marketplace/actions/docker-layer-caching
 ```
 With the use of it we can save time and (potentially) space.  
-In order to use it installation is needed, but it takes 6 seconds, meanwhile docker build may take much more time without it, in my case it was 18 seconds.
+In order to use it installation is needed, but it takes about 13 seconds, meanwhile docker build may take much more time without it, in my case it was 23 seconds.
 
 Also in order to avoid errors during this stage I set up action the way that it  
 will ignore this stage in case of failure and will simply build an image.
