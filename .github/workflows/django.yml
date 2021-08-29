@@ -48,7 +48,7 @@ jobs:
         cd app_python
         python manage.py test
     - uses: satackey/action-docker-layer-caching@v0.0.11
-        continue-on-error: true
+      continue-on-error: true
     - name: Build Image
       run: |
         cd app_python
