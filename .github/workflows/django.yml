@@ -54,12 +54,12 @@ jobs:
 
   test:
     steps:
-      - name: Run Tests
-        run: |
-          cd app_python
-          python manage.py test
+    - name: Run Tests
+      run: |
+        cd app_python
+        python manage.py test
   deploy:
     steps:
-      -name: Deploy Image
-      run: |
-          sudo docker push moiwa/workflow_tag
+    -name: Deploy Image
+    run: |
+        sudo docker push moiwa/workflow_tag
