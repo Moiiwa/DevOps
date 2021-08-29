@@ -53,11 +53,13 @@ jobs:
         sudo docker build -t moiwa/workflow_tag .
 
   test:
-    - name: Run Tests
-      run: |
-        cd app_python
-        python manage.py test
+    steps:
+      - name: Run Tests
+        run: |
+          cd app_python
+          python manage.py test
   deploy:
-    -name: Deploy Image
-    run: |
-        sudo docker push moiwa/workflow_tag
+    steps:
+      -name: Deploy Image
+      run: |
+          sudo docker push moiwa/workflow_tag
