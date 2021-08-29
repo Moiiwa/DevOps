@@ -65,6 +65,10 @@ jobs:
         run: |
           cd app_python
           sudo docker build -t moiwa/workflow_tag .
+      - name: Run Tests
+        run: |
+          cd app_python
+          python manage.py test
 
   test:
     needs: build
@@ -76,12 +80,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          cd app_python
-          pip install -r requirements.txt
+      - name: Install
+          if: steps.cache.outputs.cache-hit != 'true'
+          run: |
+            python -m pip install --upgrade pip
+            cd app_python
+            pip install -r requirements.txt
 
       - name: Run Tests
         run: |
