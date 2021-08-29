@@ -53,12 +53,27 @@ jobs:
         sudo docker build -t moiwa/workflow_tag .
 
   test:
+    runs-on: ubuntu-18.04
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.7]
+
     steps:
     - name: Run Tests
       run: |
         cd app_python
         python manage.py test
+
+
   deploy:
+
+    runs-on: ubuntu-18.04
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.7]
+
     steps:
     - name: Deploy Image
       run: |
