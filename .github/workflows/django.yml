@@ -47,10 +47,10 @@ jobs:
       uses: satackey/action-docker-layer-caching@v0.0.11
     - uses: satackey/action-docker-layer-caching@v0.0.11
       continue-on-error: true
-          - name: Build Image
-            run: |
-              cd app_python
-              sudo docker build -t moiwa/workflow_tag .
+    - name: Build Image
+      run: |
+        cd app_python
+        sudo docker build -t moiwa/workflow_tag .
 
   test:
     - name: Run Tests
