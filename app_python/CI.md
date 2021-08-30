@@ -27,3 +27,15 @@ since I have specified that "test" job depend on "build" one and "deploy" depend
 ###Github secrets
 In order to save credentials, I have used github secrets, which store dockerhub login and password
 in an encrypted form.
+
+##Jenkins part
+
+###Why nothing worked
+Firstly I went through instructions from the lab descriptions and installed  
+jenkins several times with and without plugins, no matter how, it gave me the next error after adding repository https url:
+![](static/jen2.png)
+After almost giving up googling I have decided to try with instructions with Google, they
+suggested to use the first option in item creation and not multibranch pipline, after
+walking through the whole instructions I've got the same error, but in the other form.
+![](static/jen1.png)
+
