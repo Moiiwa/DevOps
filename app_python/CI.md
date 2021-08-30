@@ -3,9 +3,11 @@
 ###Caching
  * Advantages:  
  1) Space saving
+ 2) Time saving
  * Disadvantages:  
  1) Caches can not be updated in github actions, so we need to cache files that will not be changed. For example static images or templates, as
- I've done here, since my templates and images won't change.
+ I've done here, since my templates and images won't change.  
+ Also I have cached dependencies, since they are the same all the time.
 ###Docker layers caching
 In order to speed up pipeline I decided to use the next Github Actions library  
 ```
@@ -16,3 +18,12 @@ In order to use it installation is needed, but it takes about 13 seconds, meanwh
 
 Also in order to avoid errors during this stage I set up action the way that it  
 will ignore this stage in case of failure and will simply build an image.
+
+###Jobs separation
+I separated jobs into three instead of one big job. They will work sequentially,
+since I have specified that "test" job depend on "build" one and "deploy" depends on
+"test". Thus if one stage fails, others will not run.
+
+###Github secrets
+In order to save credentials, I have used github secrets, which store dockerhub login and password
+in an encrypted form.
