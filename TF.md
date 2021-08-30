@@ -22,3 +22,9 @@ when it will be asked to and this keypair will be used for the instance.
 ##Security group configuration
 Security group is also being configured automatically. You also need to enter
 your security group name to be added to instance. This is useful in case if you want to reuse already existing security group.
+
+##Destroying changes
+To destroy changes use 
+```
+terraform destroy
+```
