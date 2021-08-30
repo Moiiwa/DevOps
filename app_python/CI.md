@@ -38,4 +38,4 @@ After almost giving up googling I have decided to try with instructions with Goo
 suggested to use the first option in item creation and not multibranch pipline, after
 walking through the whole instructions I've got the same error, but in the other form.
 ![](static/jen1.png)
-
+Repository was public, so I have no idea why this really happened.
