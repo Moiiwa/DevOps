@@ -33,9 +33,9 @@ in an encrypted form.
 ###Why nothing worked
 Firstly I went through instructions from the lab descriptions and installed  
 jenkins several times with and without plugins, no matter how, it gave me the next error after adding repository https url:
-![](static/jen2.png)
+![](app_python/static/jen2.png)
 After almost giving up googling I have decided to try with instructions with Google, they
 suggested to use the first option in item creation and not multibranch pipline, after
 walking through the whole instructions I've got the same error, but in the other form.
-![](static/jen1.png)
+![](app_python/static/jen1.png)
 Repository was public, so I have no idea why this really happened.
