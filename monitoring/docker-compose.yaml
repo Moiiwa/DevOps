@@ -29,6 +29,10 @@ services:
         max-size: "10m"
         max-file: "5"
         tag: "{{.ImageName}}|{{.Name}}"
+    deploy:
+      resources:
+        limits:
+          memory: 300M
 
   #lab7
   grafana:
@@ -43,6 +47,10 @@ services:
         max-size: "10m"
         max-file: "5"
         tag: "{{.ImageName}}|{{.Name}}"
+    deploy:
+      resources:
+        limits:
+          memory: 300M
 
   promtail:
     image: grafana/promtail:${PROMTAIL_VERSION}
@@ -61,6 +69,31 @@ services:
         max-size: "10m"
         max-file: "5"
         tag: "{{.ImageName}}|{{.Name}}"
+    deploy:
+      resources:
+        limits:
+          memory: 300M
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - 9090:9090
+    command: --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - monitoring
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+        tag: "{{.ImageName}}|{{.Name}}"
+    deploy:
+      resources:
+        limits:
+          memory: 300M
 
 
 

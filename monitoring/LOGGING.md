@@ -23,3 +23,15 @@ On the next screenshot we can see that local logs from several containers are be
 And the next screenshot proves that logs may really be displayed.
 
 ![](sc3.png)
+
+The result of deployment of Prometheus is on the next screenshot.
+
+![](sc4.png)
+
+At the next screenshot you can see dashboard for Loki.
+
+![](sc5.png)
+
+And the next one is a screenshot of the dashboard for Prometheus.
+
+![](sc6.png)
