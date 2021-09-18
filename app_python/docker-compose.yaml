@@ -3,7 +3,7 @@ services:
   python_app:
     image: moiwa/workflow_tag:${TAG:-latest}
     ports:
-      - "${OUTER_PORT:-80}:8000"
+      - "${OUTER_PORT:-8000}:8000"
     networks:
       - monitoring
     logging:
