@@ -81,3 +81,24 @@ In my case, now to access my project you need to go to
 ##Interesting(probably) fact 
 In case of automatic deployment it is meaningless to delete pods, they will be restored almost simultaniously,
 if you want to clean everything, you need to use the commands as was stated above and delete not pods, but deployment and service.
+##Installing with Helm
+If you want to install everything with helm, use the next command
+```
+helm install app-python ./app-python-0.1.0.tgz
+```
+To check dashboard use
+```
+minikube dashboard
+```
+For the  kubectl get pods,svc I have the next output
+![](img4.png)
+
+And the dashboard looks the next way
+
+Part 1:
+![](img5-p1.png)
+
+Part 2:
+![](img5-p2.png)
+
+##Note: there's only one pod, since it wasn't stated that here we also need to start 3 instances.
