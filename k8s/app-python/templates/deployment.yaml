@@ -27,12 +27,20 @@ spec:
       serviceAccountName: {{ include "app-python.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      volumes:
+        - name: volume
+          configMap:
+            name: config-map
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+            - name: volume
+              mountPath: /config.json
+              subPath: config.json
           env:
             - name: CONTAINER_PORT
               valueFrom:
