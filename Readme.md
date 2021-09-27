@@ -92,6 +92,10 @@ If you want to run project with Docker, first of all you need to get it installe
 
 All you need is just to go to http://0.0.0.0:8000/  
 
+###Upd: 27.09.21
+New feature added, after going to http://0.0.0.0:8000/visits
+user may see the time of last visit to http://0.0.0.0:8000/ .
+
 
 <!-- LICENSE -->
 ## License
