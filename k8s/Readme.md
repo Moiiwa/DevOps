@@ -82,8 +82,9 @@ In my case, now to access my project you need to go to
 In case of automatic deployment it is meaningless to delete pods, they will be restored almost simultaniously,
 if you want to clean everything, you need to use the commands as was stated above and delete not pods, but deployment and service.
 ##Installing with Helm
-If you want to install everything with helm, use the next command
+If you want to install everything with helm, use the next commands
 ```
+helm package app-python
 helm install app-python ./app-python-0.1.0.tgz
 ```
 To check dashboard use
