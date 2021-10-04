@@ -7,8 +7,8 @@ import datetime
 
 
 def index(request):
-    file_writer = open('/app_python/data/time.csv', 'w')
-    file_writer.write(f'''{datetime.datetime.now()}''')
+    file_writer = open('/app_python/data/time.csv', 'a')
+    file_writer.write(f'''   visit time: {datetime.datetime.now()}   ''')
     print(datetime.datetime.now())
     return render(request, '../templates/index.html')
 
