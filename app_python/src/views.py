@@ -7,13 +7,13 @@ import datetime
 
 
 def index(request):
-    file_writer = open('./src/time.csv', 'w')
+    file_writer = open('/app_python/data/time.csv', 'w')
     file_writer.write(f'''{datetime.datetime.now()}''')
     print(datetime.datetime.now())
     return render(request, '../templates/index.html')
 
 def visits(request):
-    with open('./src/time.csv') as f:
+    with open('/app_python/data/time.csv') as f:
         count = f.read()
     print(count)
     return HttpResponse(count)

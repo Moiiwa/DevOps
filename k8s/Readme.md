@@ -58,7 +58,7 @@ If I run
 kubectl get pods,svc
 ```
 I get the next output
-![](img2.png)
+![](screenshots/img2.png)
 
 ##Automatic deployment
 In the current folder you need to use:
@@ -71,7 +71,7 @@ And if you will use
 kubectl get pods,svc 
 ```
 You will get something like 
-![](img3.png)
+![](screenshots/img3.png)
 
 As you can see in configuration of service.yml and on the screenshot above,
 now output port is constant - 30000.
@@ -91,14 +91,14 @@ To check dashboard use
 minikube dashboard
 ```
 For the  kubectl get pods,svc I have the next output
-![](img4.png)
+![](screenshots/img4.png)
 
 And the dashboard looks the next way
 
 Part 1:
-![](img5-p1.png)
+![](screenshots/img5-p1.png)
 
 Part 2:
-![](img5-p2.png)
+![](screenshots/img5-p2.png)
 
 ##Note: there's only one pod, since it wasn't stated that here we also need to start 3 instances.
